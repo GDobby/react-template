@@ -13,6 +13,19 @@ bin-release/
 *.ipa
 *.apk
 
+*.log
+*.swp
+.vscode/*
+!.vscode/launch.json
+node_modules/
+dist/  
+
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+
+# 在后面添加正斜杠/来忽略文件夹，例如build/即忽略build文件夹。
+# 使用!来否定忽略，即比如在前面用了*.apk，然后使用!a.apk，则这个a.apk不会被忽略。
+# *用来匹配零个或多个字符，如.[oa]忽略所有以'.o'或'.a'结尾，~忽略所有以~结尾的文件（这种文件通常被许多编辑器标记为临时文件）；
+# []用来匹配括号内的任一字符，如[abc]，也可以在括号内加连接符，如[0-9]匹配0至9的数；?用来匹配单个字符。
+
