@@ -23,6 +23,18 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.jpg|png|gif|bmp$/,
+        type: "asset/inline", //默认是呈现为使用 Base64 算法编码的文件内容
+      },
     ],
+  },
+  resolve: {
+    extensions: [".js", ".jsx", ".json", ".less"],
+    modules: [path.resolve(__dirname, "../src"), "node_modules"],
+    alias: {
+      "@components": path.join(__dirname, "../src/components"),
+      "@images": path.join(__dirname, "../src/images"),
+    },
   },
 };

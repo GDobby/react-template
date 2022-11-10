@@ -17,6 +17,7 @@ module.exports = merge(common, {
         use: [
           "style-loader", // 将 JS 字符串生成为 style 节点
           "css-loader", // 将 CSS 转化成 CommonJS 模块
+          "postcss-loader",
         ],
       },
       {
@@ -25,6 +26,7 @@ module.exports = merge(common, {
           // compiles Less to CSS
           "style-loader",
           "css-loader",
+          "postcss-loader",
           "less-loader",
         ],
       },
@@ -37,4 +39,5 @@ module.exports = merge(common, {
       hash: false,
     }),
   ],
+  devtool: "eval-cheap-module-source-map",
 });
